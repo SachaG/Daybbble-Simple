@@ -10,3 +10,7 @@ var queryAPI = function () {
 Meteor.methods({
   queryFromClient: queryAPI
 });
+
+Meteor.setInterval(function(){
+  queryAPI();
+}, 3600000);
