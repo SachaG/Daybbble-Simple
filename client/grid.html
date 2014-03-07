@@ -1,0 +1,11 @@
+<template name="grid">
+  <div class="grid">
+    {{#each snapshots}}
+      <div class="grid-snapshot grid-col">
+        {{#each shots}}
+          {{>shot}}
+        {{/each}}
+      </div>
+    {{/each}}
+  </div>
+</template>
