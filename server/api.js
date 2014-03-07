@@ -6,3 +6,7 @@ var queryAPI = function () {
     }
   });
 }
+
+Meteor.methods({
+  queryFromClient: queryAPI
+});
