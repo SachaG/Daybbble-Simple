@@ -1,2 +1,6 @@
 var limit = 12;
-Meteor.subscribe('snapshots', limit);
+Session.get('skip', 0);
+
+Deps.autorun(function(){
+  Meteor.subscribe('snapshots', limit, Session.get('skip'));
+});
